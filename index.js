@@ -19,5 +19,7 @@ app.get('/api/bots/:botId', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
+    const baseURL = `https://${process.env.RAILWAY_STATIC_HOST || 'localhost'}:${PORT}`;
     console.log(`Server is running on port ${PORT}`);
+    console.log(`Visit your dashboard at: ${baseURL}`);
 });
