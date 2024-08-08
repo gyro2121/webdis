@@ -6,23 +6,7 @@
     <title>Bot Dashboard</title>
 </head>
 <body>
-    <h1>Choose Your Bot</h1>
-    <select id="bot-selector">
-        <option value="bot1">Bot 1</option>
-        <option value="bot2">Bot 2</option>
-        <!-- Add more bots here -->
-    </select>
-    <button onclick="loadBotDashboard()">Load Dashboard</button>
-
-    <div id="dashboard"></div>
-
-    <script>
-        function loadBotDashboard() {
-            const selectedBot = document.getElementById('bot-selector').value;
-            // Fetch and display the selected bot's dashboard
-            document.getElementById('dashboard').innerHTML = `Loading dashboard for ${selectedBot}...`;
-            // Here you can implement AJAX calls to get the bot's specific data
-        }
-    </script>
+    <h1>Welcome to the Bot Dashboard!</h1>
+    <p>If you see this, the server is working.</p>
 </body>
 </html>
