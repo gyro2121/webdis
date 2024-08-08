@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
 // Example API endpoint
 app.get('/api/bots/:botId', (req, res) => {
     const botId = req.params.botId;
-    // Fetch and return bot-specific data here
     res.json({ message: `Data for ${botId}` });
 });
 
