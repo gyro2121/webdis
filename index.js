@@ -10,11 +10,18 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-// Example API endpoint
-app.get('/api/bots/:botId', (req, res) => {
+app.get('/api/bots/:botId', async (req, res) => {
     const botId = req.params.botId;
-    res.json({ message: `Data for ${botId}` });
+    try {
+        // Simulating data fetching
+        const data = await getBotData(botId); // Replace with your actual data-fetching logic
+        res.json(data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
 });
+
 
 // Start the server
 app.listen(PORT, () => {
